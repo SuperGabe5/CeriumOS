@@ -32,6 +32,25 @@ modules:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
+  - type: gnome-extensions
+    install:
+      # Combines top bar and dash into a single panel, mimicking the ChromeOS shelf.
+      # Confirmed maintained and supports recent GNOME versions.
+      - dash-to-panel@jderose.net
+      # Provides a configurable app menu similar to Manjaro's. Confirmed maintained
+      # and supports recent GNOME versions.
+      - arcmenu@arcmenu.com
+      # Provides granular control over the GNOME Shell UI to hide unwanted elements.
+      # Confirmed maintained and supports recent GNOME versions.
+      - just-perfection-desktop@just-perfection
+      # Allows loading of custom shell themes, essential for a custom brand look.
+      # Confirmed maintained and available from extensions.gnome.org.
+      - user-theme@gnome-shell-extensions.gcampax.github.com
+      # Provides support for application indicator icons in the system tray,
+      # which is a feature many users expect. Confirmed maintained and available.
+      - appindicator@gnome-shell.extensions.gnome.org
+
+
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
