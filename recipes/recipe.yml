@@ -45,7 +45,24 @@ modules:
       # Provides support for application indicator icons in the system tray,
       # which is a feature many users expect. Confirmed maintained and available.
       - appindicator@gnome-shell.extensions.gnome.org
+      # THE END
+customization:
+  # Reference the files using the correct paths within your repo structure
+  files:
+    # Source path points to where the file is in your repository
+    - source: ./files/scripts/gnome_config.sh
+      # Destination is where it will be placed in the final OS image
+      destination: /usr/bin/gnome_config.sh
+      mode: 755
+    - source: ./files/scripts/flatpak_config.sh
+      destination: /usr/bin/flatpak_config.sh
+      mode: 755
 
+  # Run the scripts during the build process
+  # The path here is the destination path within the OS image
+  scripts:
+    - /usr/bin/gnome_config.sh
+    - /usr/bin/flatpak_config.sh
 
   - type: default-flatpaks
     configurations:
