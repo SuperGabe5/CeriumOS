@@ -26,15 +26,15 @@ gsettings set org.gnome.shell enabled-extensions "['dash-to-panel@jderose.net', 
 # ==============================================================================
 # Window animations will remain enabled by default.
 #
-# Set the desired icon theme (Papirus assumed from previous messages)
-gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+# Set the desired icon theme (Yaru requested by user)
+gsettings set org.gnome.desktop.interface icon-theme 'Yaru'
 
 # Set a different cursor theme (optional, for branding)
 gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
 
 # Configure system-wide appearance settings
-gsettings set org.gnome.desktop.interface gtk-theme 'ChromiumOS-theme'
-gsettings set org.gnome.shell.extensions.user-theme name 'ChromiumOS-theme'
+gsettings set org.gnome.desktop.interface gtk-theme 'Yaru'
+gsettings set org.gnome.shell.extensions.user-theme name 'Yaru'
 
 # ==============================================================================
 # Configure Dash to Panel
@@ -45,7 +45,7 @@ gsettings set org.gnome.shell.extensions.dash-to-panel position-center true
 
 # Configure panel visibility and behavior
 gsettings set org.gnome.shell.extensions.dash-to-panel dock-fixed false # Hide the panel when an app is maximized
-gsettings set org.gnome.shell.extensions.dash-to-panel intelligent-hiding true # Hide the panel when an app overlaps it
+gsettings set org.gnome.shell.extensions.dash-to-panel intelligent-hiding false # Hide the panel when an app overlaps it
 gsettings set org.gnome.shell.extensions.dash-to-panel show-show-apps-button false # Hide the "Show Applications" button
 
 # ==============================================================================
@@ -65,9 +65,9 @@ gsettings set org.gnome.shell.extensions.just-perfection startup-status 'desktop
 # The default settings of Arc Menu are often sufficient, but you can configure
 # it further if needed. Here are some examples:
 # Hide the Arc Menu button for a cleaner panel.
-gsettings set org.gnome.shell.extensions.arcmenu show-desktop false
+#gsettings set org.gnome.shell.extensions.arcmenu show-desktop false
 # Change the menu layout to be more compact.
-gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'arcmenu-layout-default'
+#gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'arcmenu-layout-default'
 
 # ==============================================================================
 # Configure GNOME Shell App Grid for smaller menu
