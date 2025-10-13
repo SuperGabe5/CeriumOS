@@ -32,7 +32,7 @@ modules:
     install:
       # Combines top bar and dash into a single panel, mimicking the ChromeOS shelf.
       # Confirmed maintained and supports recent GNOME versions.
-      - dash-to-panel@jderose.net
+      - dash-to-panel@jderose9.github.com
       # Provides a configurable app menu similar to Manjaro's. Confirmed maintained
       # and supports recent GNOME versions.
       - arcmenu@arcmenu.com
