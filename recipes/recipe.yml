@@ -37,7 +37,7 @@ modules:
 
   # --- START of REPLACEMENT for the invalid 'customization' block ---
 
- - type: files
+  - type: files
     files:
       - source: ./files/scripts/gnome_config.sh
         destination: /usr/bin/gnome_config.sh
