@@ -48,9 +48,10 @@ modules:
 
   # 2. Use separate 'script' modules to execute each script individually
   - type: script
-    commands:
-      - /usr/bin/gnome_config.sh
-      - /usr/bin/flatpak_config.sh
+  inline: /usr/bin/gnome_config.sh
+
+  - type: script
+  inline: /usr/bin/flatpak_config.sh
   
   # --- END of REPLACEMENT ---
 
