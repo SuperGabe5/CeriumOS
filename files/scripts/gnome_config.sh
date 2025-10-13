@@ -28,7 +28,7 @@ gsettings set org.gnome.shell enabled-extensions "['dash-to-panel@jderose9.githu
 gsettings set org.gnome.desktop.interface icon-theme 'Yaru'
 
 # Set a different cursor theme (optional, for branding)
-gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
 
 # Configure system-wide appearance settings
 gsettings set org.gnome.desktop.interface gtk-theme 'Yaru'
