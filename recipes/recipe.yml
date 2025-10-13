@@ -44,10 +44,10 @@ modules:
         mode: 755
 
   - type: script
-    inline: /usr/bin/gnome_config.sh
+    path: /usr/bin/gnome_config.sh
 
   - type: script
-    inline: /usr/bin/flatpak_config.sh
+    path: /usr/bin/flatpak_config.sh
 
   - type: default-flatpaks
     configurations:
