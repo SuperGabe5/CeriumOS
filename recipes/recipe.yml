@@ -23,14 +23,11 @@ modules:
         - yaru-theme
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - firefox-langpacks
 
   - type: gnome-extensions
     install:
-      # ... (gnome-extensions content omitted for brevity, it is valid)
       - dash-to-panel@jderose9.github.com
       - arcmenu@arcmenu.com
       - just-perfection-desktop@just-perfection
@@ -38,7 +35,22 @@ modules:
       - appindicator@gnome-shell.extensions.gnome.org
       # THE END
 
-  # These modules must be inside the 'modules' list using list syntax (-)
+  # The customization content is moved inside the modules list with type: customization
+  - type: customization
+    files:
+      # Source path points to where the file is in your repository
+      - source: ./files/scripts/gnome_config.sh
+        # Destination is where it will be placed in the final OS image
+        destination: /usr/bin/gnome_config.sh
+        mode: 755
+      - source: ./files/scripts/flatpak_config.sh
+        destination: /usr/bin/flatpak_config.sh
+        mode: 755
+    # Run the scripts during the build process
+    scripts:
+      - /usr/bin/gnome_config.sh
+      - /usr/bin/flatpak_config.sh
+
   - type: default-flatpaks
     configurations:
       - notify: true
@@ -48,17 +60,4 @@ modules:
           - org.gnome.Loupe
       - scope: user
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
-# The 'customization' key must be at the same top level as 'name', 'description', etc., not inside 'modules'
-customization:
-  files:
-    - source: ./files/scripts/gnome_config.sh
-      destination: /usr/bin/gnome_config.sh
-      mode: 755
-    - source: ./files/scripts/flatpak_config.sh
-      destination: /usr/bin/flatpak_config.sh
-      mode: 755
-  scripts:
-    - /usr/bin/gnome_config.sh
-    - /usr/bin/flatpak_config.sh
+  - type: signing
