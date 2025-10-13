@@ -37,8 +37,7 @@ modules:
 
   # --- START of REPLACEMENT for the invalid 'customization' block ---
 
-  # 1. Use a separate 'files' module to stage your scripts
-  - type: files
+ - type: files
     files:
       - source: ./files/scripts/gnome_config.sh
         destination: /usr/bin/gnome_config.sh
@@ -49,10 +48,12 @@ modules:
 
   # 2. Use separate 'script' modules to execute each script individually
   - type: script
-    - '/usr/bin/gnome_config.sh'
+    # Change 'script:' to 'just:'
+    just: /usr/bin/gnome_config.sh
 
   - type: script
-    - '/usr/bin/flatpak_config.sh'
+    # Change 'script:' to 'just:'
+    just: /usr/bin/flatpak_config.sh
   
   # --- END of REPLACEMENT ---
 
