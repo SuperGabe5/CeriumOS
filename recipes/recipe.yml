@@ -35,19 +35,18 @@ modules:
       - appindicator@gnome-shell.extensions.gnome.org
       # THE END
 
-  # The customization content is moved inside the modules list with type: customization
+  # Customization module using the singular 'script' key
   - type: customization
     files:
-      # Source path points to where the file is in your repository
       - source: ./files/scripts/gnome_config.sh
-        # Destination is where it will be placed in the final OS image
         destination: /usr/bin/gnome_config.sh
         mode: 755
       - source: ./files/scripts/flatpak_config.sh
         destination: /usr/bin/flatpak_config.sh
         mode: 755
-    # Run the scripts during the build process
-    scripts:
+    # The key is 'script', not 'scripts'
+    script:
+      # This runs the scripts sequentially within one single script execution step
       - /usr/bin/gnome_config.sh
       - /usr/bin/flatpak_config.sh
 
