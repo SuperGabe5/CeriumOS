@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: ceriumos
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: My solution to fill in the gap the deprecation ChromiumOS will cause.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
@@ -35,8 +35,10 @@ modules:
       - appindicator@gnome-shell.extensions.gnome.org
       # THE END
 
-  # Customization module using the singular 'script' key
-  - type: customization
+  # --- START of REPLACEMENT for the invalid 'customization' block ---
+
+  # 1. Use a separate 'files' module to stage your scripts
+  - type: files
     files:
       - source: ./files/scripts/gnome_config.sh
         destination: /usr/bin/gnome_config.sh
@@ -44,11 +46,15 @@ modules:
       - source: ./files/scripts/flatpak_config.sh
         destination: /usr/bin/flatpak_config.sh
         mode: 755
-    # The key is 'script', not 'scripts'
-    script:
-      # This runs the scripts sequentially within one single script execution step
-      - /usr/bin/gnome_config.sh
-      - /usr/bin/flatpak_config.sh
+
+  # 2. Use separate 'script' modules to execute each script individually
+  - type: script
+    script: /usr/bin/gnome_config.sh
+
+  - type: script
+    script: /usr/bin/flatpak_config.sh
+  
+  # --- END of REPLACEMENT ---
 
   - type: default-flatpaks
     configurations:
