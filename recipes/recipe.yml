@@ -46,6 +46,22 @@ modules:
       # which is a feature many users expect. Confirmed maintained and available.
       - appindicator@gnome-shell.extensions.gnome.org
       # THE END
+
+  # This module was previously below the 'customization:' block
+  - type: default-flatpaks
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        install: # system flatpaks we want all users to have and not remove
+          - org.mozilla.firefox
+          - org.gnome.Loupe
+      - scope: user # Also add Flathub user repo, but no user packages
+
+  # This module was previously below the 'customization:' block
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
+# The 'customization' key must be at the same top level as 'name', 'description', and 'modules'
 customization:
   # Reference the files using the correct paths within your repo structure
   files:
@@ -63,15 +79,3 @@ customization:
   scripts:
     - /usr/bin/gnome_config.sh
     - /usr/bin/flatpak_config.sh
-
-  - type: default-flatpaks
-    configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
-
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
