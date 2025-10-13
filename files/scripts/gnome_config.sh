@@ -7,6 +7,8 @@ set -oue pipefail
 echo 'Gnome Configurer v0.0.3'
 echo 'this tweaks things to be more like ChromiumOS'
 
+dconf update
+
 # ==============================================================================
 # CeriumOS Configuration Script
 # ==============================================================================
