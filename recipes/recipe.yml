@@ -36,8 +36,11 @@ modules:
       
   - type: script
     scripts:
-      - gnome_config.sh
+      #- gnome_config.sh
       - flatpak_config.sh
+  - type: gschema-overrides
+    include:
+      - gnome-default-settings.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
       
   - type: default-flatpaks
     configurations:
