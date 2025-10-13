@@ -33,22 +33,12 @@ modules:
       - just-perfection-desktop@just-perfection
       - user-theme@gnome-shell-extensions.gcampax.github.com
       - appindicator@gnome-shell.extensions.gnome.org
-
-  - type: files
-    files:
-      - source: ./files/scripts/gnome_config.sh
-        destination: /usr/bin/gnome_config.sh
-        mode: 755
-      - source: ./files/scripts/flatpak_config.sh
-        destination: /usr/bin/flatpak_config.sh
-        mode: 755
-
+      
   - type: script
-    path: /usr/bin/gnome_config.sh
-
-  - type: script
-    path: /usr/bin/flatpak_config.sh
-
+    scripts:
+      - gnome_config.sh
+      - flatpak_config.sh
+      
   - type: default-flatpaks
     configurations:
       - notify: true
