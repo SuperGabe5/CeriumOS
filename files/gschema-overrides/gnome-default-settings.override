@@ -1,0 +1,34 @@
+# This file applies system-wide defaults for CeriumOS.
+
+[org.gnome.shell]
+enabled-extensions = ['dash-to-panel@jderose9.github.com', 'arcmenu@arkhost.eu', 'just-perfection-desktop@just-perfection-extensions.gnome.org', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com']
+
+[org.gnome.desktop.interface]
+icon-theme = 'Yaru'
+cursor-theme = 'Yaru'
+gtk-theme = 'Yaru'
+enable-hot-corners = false
+
+[org.gnome.shell.extensions.user-theme]
+name = 'Yaru'
+
+[org.gnome.shell.extensions.dash-to-panel]
+position = 'BOTTOM'
+position-center = true
+dock-fixed = false
+intelligent-hiding = false
+show-show-apps-button = false
+
+[org.gnome.shell.extensions.just-perfection]
+disable-activities-button = true
+startup-status = 'desktop'
+
+[org.gnome.shell.extensions.arcmenu]
+menu-layout = 'arcmenu-layout-default'
+
+[org.gnome.shell.app-grid]
+rows = 4
+columns = 4
+
+[org.gnome.desktop.background]
+picture-uri = 'file:///usr/share/backgrounds/chromiumos-wallpaper.jpg'
