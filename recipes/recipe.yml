@@ -28,11 +28,11 @@ modules:
 
   - type: gnome-extensions
     install:
-      - dash-to-panel@jderose9.github.com
-      - arcmenu@arcmenu.com
-      - just-perfection-desktop@just-perfection
-      - user-theme@gnome-shell-extensions.gcampax.github.com
-      - appindicator@gnome-shell.extensions.gnome.org
+      - Dash to Panel
+      - ArcMenu
+      - Just Perfection
+      - User Themes
+      - AppIndicator and KStatusNotifierItem Support
       
   - type: script
     scripts:
