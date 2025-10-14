@@ -13,7 +13,7 @@ enable-hot-corners = false
 name = 'Yaru'
 
 [org.gnome.shell.extensions.dash-to-panel]
-position = 'BOTTOM'
+position='enum:BOTTOM'
 position-center = true
 dock-fixed = false
 intelligent-hiding = false
