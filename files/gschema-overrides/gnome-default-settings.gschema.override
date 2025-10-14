@@ -12,7 +12,7 @@ enable-hot-corners = false
 [org.gnome.shell.extensions.user-theme]
 name = 'Yaru'
 
-[org.gnome.shell.extensions.dash-to-panel]
+#[org.gnome.shell.extensions.dash-to-panel]
 # position='enum:BOTTOM'
 #position-center = true
 #dock-fixed = false
