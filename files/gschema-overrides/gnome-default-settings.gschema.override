@@ -14,7 +14,7 @@ name = 'Yaru'
 
 [org.gnome.shell.extensions.dash-to-panel]
 # position='enum:BOTTOM'
-position-center = true
+#position-center = true
 dock-fixed = false
 intelligent-hiding = false
 show-show-apps-button = false
