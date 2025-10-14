@@ -12,23 +12,20 @@ enable-hot-corners = false
 [org.gnome.shell.extensions.user-theme]
 name = 'Yaru'
 
-#[org.gnome.shell.extensions.dash-to-panel]
-# position='enum:BOTTOM'
-#position-center = true
-#dock-fixed = false
-#intelligent-hiding = false
-#show-show-apps-button = false
+[dash-to-panel]
+position = 'BOTTOM'
+position-center = true
+dock-fixed = false
+intelligent-hiding = false
+show-show-apps-button = false
 
-[org.gnome.shell.extensions.just-perfection]
+[just-perfection]
 disable-activities-button = true
 startup-status = 'desktop'
 
-[org.gnome.shell.extensions.arcmenu]
+[arcmenu]
 menu-layout = 'arcmenu-layout-default'
 
 [org.gnome.shell.app-grid]
 rows = 4
 columns = 4
-
-[org.gnome.desktop.background]
-picture-uri = 'file:///usr/share/backgrounds/chromiumos-wallpaper.jpg'
