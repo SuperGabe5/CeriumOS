@@ -17,7 +17,7 @@ name = 'Yaru'
 #position-center = true
 #dock-fixed = false
 #intelligent-hiding = false
-show-show-apps-button = false
+#show-show-apps-button = false
 
 [org.gnome.shell.extensions.just-perfection]
 disable-activities-button = true
