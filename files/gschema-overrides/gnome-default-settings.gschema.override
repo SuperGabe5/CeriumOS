@@ -1,7 +1,7 @@
 # This file applies system-wide defaults for CeriumOS.
 
 [org.gnome.shell]
-enabled-extensions = ['dash-to-panel@jderose9.github.com', 'arcmenu@arkhost.eu', 'just-perfection-desktop@just-perfection-extensions.gnome.org', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com']
+enabled-extensions = ['dash-to-panel@jderose9.github.com', 'arcmenu@arkhost.eu', 'just-perfection-desktop@just-perfection-extensions.gnome.org', 'appindicatorsupport@rgcjonas.gmail.com']
 
 [org.gnome.desktop.interface]
 icon-theme = 'Yaru'
