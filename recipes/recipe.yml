@@ -31,7 +31,7 @@ modules:
       - Dash to Panel
       - ArcMenu
       - Just Perfection
-      - User Themes
+      #- User Themes
       - AppIndicator and KStatusNotifierItem Support
       
   - type: script
