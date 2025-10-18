@@ -9,8 +9,8 @@ cursor-theme = 'Yaru'
 gtk-theme = 'Yaru'
 enable-hot-corners = false
 
-[org.gnome.shell.extensions.user-theme]
-name = 'Yaru'
+#[org.gnome.shell.extensions.user-theme]
+#name = 'Yaru'
 
 [dash-to-panel]
 position = 'BOTTOM'
